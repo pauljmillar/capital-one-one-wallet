@@ -253,6 +253,15 @@ button {
   margin-bottom: var(--space-3);
 }
 
+.modal-box.about-modal code {
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 0.8rem;
+  background: var(--theme-primary-tint);
+  color: var(--theme-primary);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
 /* ---------------- Quick actions ---------------- */
 .quick-actions {
   display: flex;
