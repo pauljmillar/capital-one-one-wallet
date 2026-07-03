@@ -220,6 +220,39 @@ button {
   color: #222;
 }
 
+.about-link {
+  font-size: var(--font-caption);
+  font-weight: 600;
+  color: #666;
+  background: none;
+  border: none;
+  border-left: 1px solid #ddd;
+  padding: 0 0 0 var(--space-2);
+  margin-left: 2px;
+  cursor: pointer;
+}
+
+.about-link:hover {
+  color: #222;
+  text-decoration: underline;
+}
+
+.modal-box.about-modal {
+  text-align: left;
+  max-width: 380px;
+}
+
+.modal-box.about-modal h3 {
+  margin: 0 0 var(--space-3);
+  font-size: 1.1rem;
+}
+
+.modal-box.about-modal p {
+  font-size: 0.9rem;
+  color: var(--theme-text-muted);
+  margin-bottom: var(--space-3);
+}
+
 /* ---------------- Quick actions ---------------- */
 .quick-actions {
   display: flex;
