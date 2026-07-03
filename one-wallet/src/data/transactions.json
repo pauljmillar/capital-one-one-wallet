@@ -1,0 +1,20 @@
+[
+  { "id": 1, "theme": "key", "brand": "West Elm", "desc": "Sofa purchase", "date": "2026-06-14", "amount": 420.00, "points": 840 },
+  { "id": 2, "theme": "key", "brand": "Pottery Barn Kids", "desc": "Bunk bed", "date": "2026-06-02", "amount": 680.00, "points": 1360 },
+  { "id": 3, "theme": "key", "brand": "Williams Sonoma", "desc": "Cookware set", "date": "2026-05-27", "amount": 210.00, "points": 420 },
+  { "id": 4, "theme": "key", "brand": "Mark & Graham", "desc": "Monogrammed tote", "date": "2026-05-19", "amount": 95.00, "points": 190 },
+  { "id": 5, "theme": "key", "brand": "West Elm", "desc": "Table lamp pair", "date": "2026-05-11", "amount": 160.00, "points": 320 },
+  { "id": 6, "theme": "key", "brand": "Pottery Barn", "desc": "Linen bedding set", "date": "2026-04-30", "amount": 240.00, "points": 480 },
+  { "id": 7, "theme": "key", "brand": "Pottery Barn Teen", "desc": "Desk chair", "date": "2026-04-22", "amount": 175.00, "points": 350 },
+  { "id": 8, "theme": "key", "brand": "Williams Sonoma", "desc": "Knife set", "date": "2026-04-10", "amount": 130.00, "points": 260 },
+
+  { "id": 9, "theme": "kohls", "brand": "Kohl's", "desc": "Spring apparel haul", "date": "2026-06-10", "amount": 145.00, "points": 290 },
+  { "id": 10, "theme": "kohls", "brand": "Kohl's", "desc": "Small kitchen appliance", "date": "2026-05-22", "amount": 89.00, "points": 178 },
+  { "id": 11, "theme": "kohls", "brand": "Kohl's", "desc": "Kids' shoes", "date": "2026-05-03", "amount": 54.00, "points": 108 },
+  { "id": 12, "theme": "kohls", "brand": "Kohl's", "desc": "Bedding clearance", "date": "2026-04-18", "amount": 72.00, "points": 144 },
+
+  { "id": 13, "theme": "tmobile", "brand": "T-Mobile", "desc": "Monthly wireless bill", "date": "2026-06-01", "amount": 185.00, "points": 370 },
+  { "id": 14, "theme": "tmobile", "brand": "T-Mobile", "desc": "Device accessory", "date": "2026-05-20", "amount": 45.00, "points": 90 },
+  { "id": 15, "theme": "tmobile", "brand": "T-Mobile", "desc": "Monthly wireless bill", "date": "2026-05-01", "amount": 185.00, "points": 370 },
+  { "id": 16, "theme": "tmobile", "brand": "T-Mobile", "desc": "Monthly wireless bill", "date": "2026-04-01", "amount": 185.00, "points": 370 }
+]

@@ -1,0 +1,18 @@
+[
+  { "id": 1, "theme": "key", "brand": "West Elm", "title": "$25 off", "cost": 2500 },
+  { "id": 2, "theme": "key", "brand": "Pottery Barn Kids", "title": "Free shipping", "cost": 1200 },
+  { "id": 3, "theme": "key", "brand": "Williams Sonoma", "title": "$15 off cookware", "cost": 1500 },
+  { "id": 4, "theme": "key", "brand": "Mark & Graham", "title": "Free monogramming", "cost": 900 },
+  { "id": 5, "theme": "key", "brand": "Pottery Barn", "title": "$40 off $200+", "cost": 4000 },
+  { "id": 6, "theme": "key", "brand": "Pottery Barn Teen", "title": "$20 off", "cost": 2000 },
+
+  { "id": 7, "theme": "kohls", "brand": "Kohl's", "title": "$10 Kohl's Cash", "cost": 1000 },
+  { "id": 8, "theme": "kohls", "brand": "Kohl's", "title": "$25 Kohl's Cash", "cost": 2500 },
+  { "id": 9, "theme": "kohls", "brand": "Kohl's", "title": "Free shipping", "cost": 800 },
+  { "id": 10, "theme": "kohls", "brand": "Kohl's", "title": "20% off single item", "cost": 1800 },
+
+  { "id": 11, "theme": "tmobile", "brand": "T-Mobile", "title": "$15 bill credit", "cost": 1500 },
+  { "id": 12, "theme": "tmobile", "brand": "T-Mobile", "title": "$40 bill credit", "cost": 4000 },
+  { "id": 13, "theme": "tmobile", "brand": "T-Mobile", "title": "Device accessory credit", "cost": 2200 },
+  { "id": 14, "theme": "tmobile", "brand": "T-Mobile", "title": "Statement credit", "cost": 3000 }
+]

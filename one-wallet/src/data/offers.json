@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "theme": "key",
+    "rationale": "Because you shop Pottery Barn Kids and West Elm, here's a boosted offer at Mark & Graham",
+    "title": "3X points on gifts through July 31",
+    "brand": "Mark & Graham"
+  },
+  {
+    "id": 2,
+    "theme": "key",
+    "rationale": "Because you're a Williams Sonoma regular, here's an early look at Pottery Barn's new arrivals",
+    "title": "2X points on new arrivals this week",
+    "brand": "Pottery Barn"
+  },
+  {
+    "id": 3,
+    "theme": "key",
+    "rationale": "Because you furnished with West Elm this year, here's a home-office boost at Pottery Barn Teen",
+    "title": "$30 back on desks & seating",
+    "brand": "Pottery Barn Teen"
+  },
+  {
+    "id": 4,
+    "theme": "key",
+    "rationale": "Because you shop across the family, here's a family-wide milestone bonus",
+    "title": "500 bonus points at any 3 brands this month",
+    "brand": "Williams Sonoma"
+  },
+  {
+    "id": 5,
+    "theme": "kohls",
+    "rationale": "Because you shop Kohl's apparel regularly, here's a seasonal boost",
+    "title": "2X Kohl's Cash on apparel through July 31",
+    "brand": "Kohl's"
+  },
+  {
+    "id": 6,
+    "theme": "tmobile",
+    "rationale": "Because you've been a T-Mobile cardholder for 6+ months, here's a loyalty bonus",
+    "title": "3X points on accessories this month",
+    "brand": "T-Mobile"
+  }
+]

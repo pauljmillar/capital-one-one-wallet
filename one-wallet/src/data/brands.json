@@ -1,0 +1,32 @@
+{
+  "key": {
+    "name": "The Key",
+    "tagline": "Earn & redeem across Williams Sonoma · Pottery Barn · West Elm · Mark & Graham",
+    "family": ["Williams Sonoma", "Pottery Barn", "Pottery Barn Kids", "Pottery Barn Teen", "West Elm", "Mark & Graham"],
+    "pointsBalance": 12480,
+    "contribution": [
+      { "brand": "Pottery Barn", "pct": 0.44 },
+      { "brand": "West Elm", "pct": 0.31 },
+      { "brand": "Williams Sonoma", "pct": 0.18 },
+      { "brand": "Mark & Graham", "pct": 0.07 }
+    ]
+  },
+  "kohls": {
+    "name": "Kohl's Rewards",
+    "tagline": "Earn & redeem Kohl's Cash across every Kohl's purchase",
+    "family": ["Kohl's"],
+    "pointsBalance": 3120,
+    "contribution": [
+      { "brand": "Kohl's", "pct": 1.0 }
+    ]
+  },
+  "tmobile": {
+    "name": "T-Mobile Card",
+    "tagline": "Earn points on your wireless bill and everyday spend",
+    "family": ["T-Mobile"],
+    "pointsBalance": 8760,
+    "contribution": [
+      { "brand": "T-Mobile", "pct": 1.0 }
+    ]
+  }
+}

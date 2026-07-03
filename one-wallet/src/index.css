@@ -1,0 +1,508 @@
+:root {
+  /* Capital One trust elements — used sparingly (footer, disclosures, badge) */
+  --c1-navy: #004878;
+  --c1-red: #d22e1e;
+  --c1-navy-tint: #e8f0f5;
+
+  /* Shell structure (theme-agnostic) */
+  --shell-radius: 12px;
+  --shell-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+
+  --font-display: 2.25rem;
+  --font-headline: 1.4rem;
+  --font-body: 1rem;
+  --font-caption: 0.8rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", -apple-system, sans-serif;
+  margin: 0;
+  background: var(--theme-bg);
+  color: var(--theme-text);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* ---------------- Theme A — Williams-Sonoma Family ("The Key") ---------------- */
+[data-theme="key"] {
+  --theme-primary: #34472f;
+  --theme-primary-tint: #e9ede4;
+  --theme-accent: #b08d57;
+  --theme-bg: #faf7f2;
+  --theme-surface: #ffffff;
+  --theme-text: #22281f;
+  --theme-text-muted: #6b7263;
+  --theme-font-display: "Georgia", "Times New Roman", serif;
+  --theme-border: #e3dfd5;
+  --theme-brand-name: "The Key";
+}
+
+/* ---------------- Theme B — Kohl's ---------------- */
+[data-theme="kohls"] {
+  --theme-primary: #800033;
+  --theme-primary-tint: #f5e5eb;
+  --theme-accent: #2e7d32;
+  --theme-bg: #fafafa;
+  --theme-surface: #ffffff;
+  --theme-text: #1a1a1a;
+  --theme-text-muted: #6e6e6e;
+  --theme-font-display: "Arial Black", "Inter", sans-serif;
+  --theme-border: #e5e5e5;
+  --theme-brand-name: "Kohl's Rewards";
+}
+
+/* ---------------- Theme C — T-Mobile ---------------- */
+[data-theme="tmobile"] {
+  --theme-primary: #e20074;
+  --theme-primary-tint: #fce5f0;
+  --theme-accent: #191919;
+  --theme-bg: #17181a;
+  --theme-surface: #232326;
+  --theme-text: #ffffff;
+  --theme-text-muted: #a6a6aa;
+  --theme-font-display: "Inter", sans-serif;
+  --theme-border: #35363a;
+  --theme-brand-name: "T-Mobile Card";
+}
+
+/* ---------------- Shared shell ---------------- */
+.wallet-shell {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--theme-bg);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: var(--shell-shadow);
+}
+
+.wallet-header {
+  background: var(--theme-primary);
+  color: #fff;
+  padding: var(--space-5) var(--space-4);
+  border-radius: 0 0 var(--shell-radius) var(--shell-radius);
+  transition: background 0.4s ease;
+}
+
+.wallet-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.wallet-brand-name {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.c1-micro-badge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  opacity: 0.85;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.points-hero {
+  font-family: var(--theme-font-display);
+  font-size: var(--font-display);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.wallet-tagline {
+  margin-top: var(--space-2);
+  font-size: var(--font-caption);
+  opacity: 0.85;
+  max-width: 34ch;
+}
+
+.wallet-main {
+  flex: 1;
+  padding-bottom: var(--space-6);
+}
+
+.wallet-card {
+  background: var(--theme-surface);
+  border: 1px solid var(--theme-border);
+  border-radius: var(--shell-radius);
+  box-shadow: var(--shell-shadow);
+  padding: var(--space-4);
+  margin: var(--space-3) var(--space-4);
+}
+
+.wallet-card h2 {
+  font-size: var(--font-headline);
+  margin: 0 0 var(--space-3);
+}
+
+.brand-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-caption);
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--theme-primary-tint);
+  color: var(--theme-primary);
+  white-space: nowrap;
+}
+
+.trust-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  font-size: var(--font-caption);
+  color: var(--theme-text-muted);
+}
+
+.trust-footer .c1-mark {
+  color: var(--c1-navy);
+  font-weight: 700;
+}
+
+[data-theme="tmobile"] .trust-footer .c1-mark {
+  color: #6fb3e0;
+}
+
+.theme-switcher {
+  position: fixed;
+  top: var(--space-3);
+  right: var(--space-3);
+  z-index: 50;
+  background: #fff;
+  border-radius: var(--shell-radius);
+  box-shadow: var(--shell-shadow);
+  padding: var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.theme-switcher label {
+  font-size: var(--font-caption);
+  color: #666;
+  font-weight: 600;
+}
+
+.theme-switcher select {
+  font-size: var(--font-caption);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 4px 8px;
+  background: #fff;
+  color: #222;
+}
+
+/* ---------------- Quick actions ---------------- */
+.quick-actions {
+  display: flex;
+  gap: var(--space-2);
+  padding: 0 var(--space-4);
+  margin-top: var(--space-3);
+}
+
+.quick-action-btn {
+  flex: 1;
+  border: 1px solid var(--theme-border);
+  background: var(--theme-surface);
+  color: var(--theme-primary);
+  border-radius: var(--shell-radius);
+  padding: var(--space-3) var(--space-2);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.quick-action-btn:hover {
+  box-shadow: var(--shell-shadow);
+  transform: translateY(-1px);
+}
+
+/* ---------------- Contribution bar ---------------- */
+.contribution-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+  font-size: var(--font-caption);
+}
+
+.contribution-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--theme-text-muted);
+}
+
+.contribution-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+}
+
+/* ---------------- Bottom nav ---------------- */
+.bottom-nav {
+  display: flex;
+  border-top: 1px solid var(--theme-border);
+  background: var(--theme-surface);
+}
+
+.bottom-nav a {
+  flex: 1;
+  text-align: center;
+  padding: var(--space-3) 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--theme-text-muted);
+  border-bottom: 3px solid transparent;
+}
+
+.bottom-nav a.active {
+  color: var(--theme-primary);
+  border-bottom: 3px solid var(--theme-primary);
+}
+
+/* ---------------- Filter pills ---------------- */
+.filter-pills {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+  padding: var(--space-3) var(--space-4) 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.filter-pills::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-pill {
+  flex-shrink: 0;
+  border: 1px solid var(--theme-border);
+  background: var(--theme-surface);
+  color: var(--theme-text-muted);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: var(--font-caption);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filter-pill.active {
+  background: var(--theme-primary);
+  border-color: var(--theme-primary);
+  color: #fff;
+}
+
+/* ---------------- Activity list ---------------- */
+.activity-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--theme-border);
+}
+
+.activity-row:last-child {
+  border-bottom: none;
+}
+
+.activity-row-left .activity-desc {
+  font-weight: 600;
+  margin: var(--space-1) 0 2px;
+  font-size: 0.9rem;
+}
+
+.activity-row-left .activity-date {
+  font-size: var(--font-caption);
+  color: var(--theme-text-muted);
+}
+
+.activity-row-right {
+  text-align: right;
+}
+
+.activity-points {
+  font-weight: 700;
+  color: var(--theme-primary);
+}
+
+.activity-amount {
+  font-size: var(--font-caption);
+  color: var(--theme-text-muted);
+}
+
+/* ---------------- Redeem grid ---------------- */
+.redeem-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+}
+
+.redeem-card {
+  background: var(--theme-surface);
+  border: 1px solid var(--theme-border);
+  border-radius: var(--shell-radius);
+  box-shadow: var(--shell-shadow);
+  padding: var(--space-3);
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  transition: transform 0.15s ease;
+}
+
+.redeem-card:hover {
+  transform: translateY(-2px);
+}
+
+.redeem-card-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.redeem-card-cost {
+  font-size: var(--font-caption);
+  color: var(--theme-text-muted);
+  font-weight: 600;
+}
+
+/* ---------------- Modal / toast ---------------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: var(--space-4);
+}
+
+.modal-box {
+  background: var(--theme-surface);
+  color: var(--theme-text);
+  border-radius: var(--shell-radius);
+  padding: var(--space-5);
+  max-width: 340px;
+  width: 100%;
+  text-align: center;
+}
+
+.modal-box p {
+  margin: 0 0 var(--space-4);
+  font-size: 1rem;
+}
+
+.modal-actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.modal-btn {
+  flex: 1;
+  padding: var(--space-3);
+  border-radius: 8px;
+  border: 1px solid var(--theme-border);
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--theme-surface);
+  color: var(--theme-text);
+}
+
+.modal-btn.primary {
+  background: var(--theme-primary);
+  border-color: var(--theme-primary);
+  color: #fff;
+}
+
+.toast {
+  position: fixed;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--theme-primary);
+  color: #fff;
+  padding: var(--space-3) var(--space-5);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: var(--shell-shadow);
+  z-index: 100;
+}
+
+/* ---------------- Offers ---------------- */
+.offer-card {
+  background: var(--theme-surface);
+  border: 1px solid var(--theme-border);
+  border-radius: var(--shell-radius);
+  box-shadow: var(--shell-shadow);
+  padding: var(--space-4);
+  margin: var(--space-3) var(--space-4);
+}
+
+.offer-rationale {
+  font-size: var(--font-caption);
+  color: var(--theme-text-muted);
+  margin-bottom: var(--space-2);
+}
+
+.offer-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+}
+
+.offer-cta {
+  background: var(--theme-primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: var(--space-2) var(--space-4);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.section-label {
+  padding: var(--space-4) var(--space-4) 0;
+  font-size: var(--font-caption);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--theme-text-muted);
+}
